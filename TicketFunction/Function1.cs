@@ -27,7 +27,7 @@ namespace TicketFunction
 
             var ticket = JsonSerializer.Deserialize<Tickets>(messageJson, options);
 
-            if (ticket != null)
+            if (ticket == null)
             {
                 _logger.LogError("Failed to deserialize");
                 return;
